@@ -8,7 +8,7 @@ module.exports = {
           vermelho: '#FF003D',
           laranja: '#F83D13',
           pretoGraffite: '#0B0907',
-          
+          teste: '#465467',
         },
       },
       fontFamily: {
