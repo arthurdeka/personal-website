@@ -11,7 +11,7 @@
 
   <body class="bg-coresProjeto-pretoGraffite">
     <header
-      class="header py-02 sticky top-0 flex items-center justify-between bg-coresProjeto-pretoGraffite px-8 font-Inter text-coresProjeto-vermelho shadow-md"
+      class="header py-02 sticky top-0 z-50 flex items-center justify-between bg-coresProjeto-pretoGraffite px-8 font-Inter text-coresProjeto-vermelho shadow-md"
     >
       <!-- logo -->
       <h1 class="text-2xl font-bold">Arthur Rodrigues</h1>
@@ -114,35 +114,22 @@
     <div class="container mx-auto w-8/12">
       <!-- buttons -->
       <div class="mt-4 flex space-x-2 pl-40 pr-40">
-        <button
-          type="button"
-          class="mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
-        >
-          XP / Educação
-        </button>
-        <button
-          type="button"
-          class="mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
-        >
+        <a href="#xp" class="button mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-red-800">
+            XP / Educação
+        </a>
+        <a href="#stack" class="button mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-red-800">
           Meu Stack
-        </button>
-        <button
-          type="button"
-          class="mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
-        >
+        </a>
+        <a href="#projects" class="button mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-red-800">
           Projetos
-        </button>
-        <button
-          type="button"
-          class="mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
-        >
+        </a>
+        <a href="#socials" class="button mb-2 mr-2 w-6/12 rounded-lg bg-gradient-to-br from-red-600 to-coresProjeto-laranja px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-red-800">
           Redes Sociais
-        </button>
-        <!-- from-green-400 to-blue-600 -->
+        </a>
       </div>
 
       <!-- XP/Education -->
-      <div class="mx-auto">
+      <div id="xp" class="mx-auto scroll-mt-10">
         <br />
         <h2 class="text-3xl font-bold text-white">Experiência e Educação</h2>
         <br />
@@ -222,7 +209,7 @@
       </div>
 
       <!-- Meu Stack -->
-      <div class="mx-auto">
+      <div id="stack" class="mx-auto scroll-mt-10">
         <br />
         <h2 class="text-3xl font-bold text-white">Meu Stack</h2>
         <br />
@@ -339,7 +326,7 @@
       </div>
 
       <!-- Projetos -->
-      <div>
+      <div id="projects" class="mx-auto scroll-mt-10">
         <br />
         <br />
         <h2 class="text-3xl font-bold text-white">Projetos</h2>
