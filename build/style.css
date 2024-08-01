@@ -888,16 +888,16 @@ video {
   border-width: 1px;
 }
 
+.border-0{
+  border-width: 0px;
+}
+
 .border-2{
   border-width: 2px;
 }
 
 .border-8{
   border-width: 8px;
-}
-
-.border-0{
-  border-width: 0px;
 }
 
 .border-b{
@@ -914,10 +914,6 @@ video {
 
 .border-solid{
   border-style: solid;
-}
-
-.border-none{
-  border-style: none;
 }
 
 .border-coresProjeto-laranja{
@@ -1413,10 +1409,6 @@ video {
 
   .md\:justify-between{
     justify-content: space-between;
-  }
-
-  .md\:rounded{
-    border-radius: 0.25rem;
   }
 
   .md\:border{
