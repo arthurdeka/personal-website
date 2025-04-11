@@ -4,3 +4,57 @@
 @theme {
   --font-primary: 'Share Tech Mono', 'monospace'
 }
+
+@layer utilities {
+  @keyframes flicker-realistic {
+    0%   { opacity: 1; }
+    2%   { opacity: 0.3; }
+    4%   { opacity: 0.9; }
+    6%   { opacity: 0.1; }
+    8%   { opacity: 1; }
+    10%  { opacity: 0.4; }
+    12%  { opacity: 0.95; }
+    14%  { opacity: 0.2; }
+    16%  { opacity: 1; }
+    18%  { opacity: 0.7; }
+    20%  { opacity: 1; }
+
+    /* os 80% restantes mantêm estável */
+    100% { opacity: 1; }
+  }
+
+  .flicker-loop {
+    animation: flicker-realistic 1s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes menu-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0.3;
+    }
+  }
+
+  .menu-flicker {
+    animation: menu-flicker 2.5s infinite steps(1);
+  }
+}
+
+
+@layer utilities {
+  @keyframes menu-flicker-alt {
+    0%, 17%, 19%, 23%, 80%, 100% {
+      opacity: 1;
+    }
+    18%, 20%, 22%, 81% {
+      opacity: 0.2;
+    }
+  }
+
+  .menu-flicker-alt {
+    animation: menu-flicker-alt 3s infinite steps(1);
+  }
+}
