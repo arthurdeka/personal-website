@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
           <a onClick={() => navigate("/projects")} href="#projects" className="text-white hover:underline inline-block menu-flicker">
             &gt; projetos
           </a>
-          <a href="#projects" className="text-white hover:underline inline-block menu-flicker">
+          <a onClick={() => navigate("/mystack")} href="#projects" className="text-white hover:underline inline-block menu-flicker">
             &gt; meu stack
           </a>
           <a href="#socials" className="text-white hover:underline menu-flicker">
