@@ -10,7 +10,7 @@ const navigate = useNavigate();
 
         <div className="flex flex-row justify-between items-center mb-12">
           <h1 className="text-white text-4xl mb-1">
-            <span className="font-normal flicker-loop ">Experiência e Educação</span>
+            <span className="font-normal flicker-loop ">Experiência & Educação</span>
           </h1>
           <span onClick={() => navigate("/")} className="cursor-pointer hover:underline">Voltar</span>
         </div>

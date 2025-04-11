@@ -32,10 +32,7 @@ const HomePage: React.FC = () => {
           <a onClick={() => navigate("/professionalxp")} href="#socials" className="text-white hover:underline menu-flicker">
             &gt; experiência e educação
           </a>
-          <a href="#socials" className="text-white hover:underline menu-flicker">
-            &gt; educação
-          </a>
-          <a href="#hardware" className="text-white hover:underline menu-flicker">
+          <a onClick={() => navigate("/socials")} href="#hardware" className="text-white hover:underline menu-flicker">
             &gt; redes sociais
           </a>
         </div>
