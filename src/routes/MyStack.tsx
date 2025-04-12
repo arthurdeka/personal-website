@@ -24,9 +24,8 @@ const navigate = useNavigate();
             </div>
             <div>
                 <h2 className="text-2xl hover:underline">Back-end</h2>
-                <h3 className="text-md text-gray-400">&gt; Java 17 Spring Boot, Python Flask, JS NodeJS</h3>
-                <h3 className="text-md text-gray-400">&gt; Java Lombok, JS ExpressJS, </h3>
-                <h3 className="text-md text-gray-400">&gt; Bootstrap, Tailwind</h3>
+                <h3 className="text-md text-gray-400">&gt; Java 17 Spring Boot, Python Flask, NodeJS</h3>
+                <h3 className="text-md text-gray-400">&gt; Java Lombok, ExpressJS, </h3>
             </div>
             <div>
                 <h2 className="text-2xl hover:underline">Banco de dados</h2>
@@ -34,11 +33,12 @@ const navigate = useNavigate();
                 <h3 className="text-md text-gray-400">&gt; MongoDB</h3>
             </div>
             <div>
-                <h2 className="text-2xl hover:underline">Infra</h2>
+                <h2 className="text-2xl hover:underline">Ferramentas e DevOps</h2>
                 <h3 className="text-md text-gray-400">&gt; Vercel, Render (Front)</h3>
                 <h3 className="text-md text-gray-400">&gt; Lambda AWS, EC2 AWS (Back)</h3>
                 <h3 className="text-md text-gray-400">&gt; Neon, EC2 AWS (DB)</h3>
                 <h3 className="text-md text-gray-400">&gt; DuckDNS (DNS)</h3>
+                <h3 className="text-md text-gray-400">&gt; Modelos de LLM (Langchain, OpenAI API)</h3>
             </div>
         </div>
         
