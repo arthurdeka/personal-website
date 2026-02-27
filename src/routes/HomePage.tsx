@@ -1,52 +1,72 @@
-import { useNavigate } from "react-router-dom";
-
+﻿import { useNavigate } from "react-router-dom";
+import WindowLayout from "../components/WindowLayout";
 
 const HomePage: React.FC = () => {
-
-    const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 font-primary">
-      <div className="border border-white p-6 w-full max-w-md">
-        <h1 className="text-white text-4xl mb-1">
-          <span className="font-normal flicker-loop">Arthur Rodrigues</span>
-        </h1>
-        <p className="text-gray-400 text-sm ml-4 menu-flicker-alt">
-          Engenheiro de Software
+    <WindowLayout
+      title="Arthur Rodrigues - Portfolio"
+      subtitle="Engenheiro de Software - Sistemas de Informacao"
+      statusLeft="Bem-vindo"
+      statusRight="Navegue pelo menu a esquerda"
+    >
+      <div className="home-hero">
+        <h1>Arthur Rodrigues</h1>
+        <p>Engenheiro de Software</p>
+        <p className="muted">
+          Cursando Sistemas de Informacao - Montes Claros, MG
         </p>
-        <p className="text-gray-400 text-sm mb-6 ml-4 menu-flicker-alt">
-          Cursando Ensino Superior - Sistemas de Informação
-        </p>
-        
-        <br />
-        <div className="flex flex-col space-y-4 text-2xl">
-          <a onClick={() => navigate("/about")} href="#about" className="text-white hover:underline inline-block menu-flicker">
-            &gt; sobre mim
-          </a>
-          <a onClick={() => navigate("/projects")} href="#projects" className="text-white hover:underline inline-block menu-flicker">
-            &gt; projetos
-          </a>
-          <a onClick={() => navigate("/mystack")} href="#projects" className="text-white hover:underline inline-block menu-flicker">
-            &gt; meu stack
-          </a>
-          <a onClick={() => navigate("/professionalxp")} href="#socials" className="text-white hover:underline menu-flicker">
-            &gt; experiência e educação
-          </a>
-          <a onClick={() => navigate("/socials")} href="#hardware" className="text-white hover:underline menu-flicker">
-            &gt; redes sociais
-          </a>
+        <div className="button-row">
+          <button className="default" onClick={() => navigate("/projects")}>
+            Projetos
+          </button>
+          <button onClick={() => navigate("/about")}>Sobre mim</button>
+          <button onClick={() => navigate("/socials")}>Contato</button>
         </div>
-        
-        <br /><br /><br /><br /><br />
-
-        <p className="text-white text-sm mt-8 menu-flicker-alt">
-          meu email: ~{" "}
-          <span className="hover:underline">
-            arthurdk01@gmail.com
-          </span>
-        </p>
       </div>
-    </div>
+
+      <div className="home-grid">
+        <fieldset>
+          <legend>Resumo</legend>
+          <p>
+            Atuo com desenvolvimento web, foco em Java 17 + Spring Boot e
+            interfaces em React/Vue.
+          </p>
+          <p className="muted">
+            Interesse atual: aplicacoes com LLM e produtos orientados a usuario.
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Destaques</legend>
+          <ul className="list">
+            <li>Projetos publicados e produtos em producao</li>
+            <li>Experiencia com Cloud (AWS, Vercel, Render)</li>
+            <li>Trabalho com bancos SQL e NoSQL</li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Atalhos</legend>
+          <div className="button-row">
+            <button onClick={() => navigate("/mystack")}>Meu stack</button>
+            <button onClick={() => navigate("/professionalxp")}>
+              Experiencia
+            </button>
+            <button onClick={() => navigate("/projects")}>Ver projetos</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato</legend>
+          <p>Email: arthurdk01@gmail.com</p>
+          <p className="muted">
+            LinkedIn e GitHub estao na secao Redes sociais.
+          </p>
+        </fieldset>
+      </div>
+    </WindowLayout>
   );
 };
 

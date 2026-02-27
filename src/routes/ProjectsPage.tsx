@@ -1,62 +1,83 @@
-import { useNavigate } from "react-router-dom";
+﻿import WindowLayout from "../components/WindowLayout";
+
+const projects = [
+  {
+    name: "The Open Source Repository",
+    url: "https://theopensourcerepository.vercel.app",
+    stack: "Vue, TypeScript, Spring Boot, MariaDB",
+    summary: "Projeto-portfolio de repositorio de aplicacoes open-source.",
+    infra: "Hospedado em EC2 AWS e redirecionado por DuckDNS.",
+    year: "2025",
+  },
+  {
+    name: "MCP Servers Hub",
+    url: "https://www.mcpservershub.tech",
+    stack: "React, TypeScript (front-end)",
+    summary: "Em construcao.",
+    year: "2025",
+  },
+  {
+    name: "CustomTkBuilder",
+    url: "https://customtkbuilder.com",
+    stack: "React, TypeScript",
+    summary: "Construtor de interfaces com 1.000 usuarios mensais em 80 paises.",
+    year: "2024",
+  },
+  {
+    name: "ColorfulGPT",
+    url: "https://chromewebstore.google.com/detail/colorfulgpt/gllpahblfeolhjjdpiljniklgdpkhdne",
+    stack: "JavaScript",
+    summary: "Extensao de navegador publicada na Chrome Web Store.",
+    year: "2024",
+  },
+  {
+    name: "Toolkit do Pesquisador",
+    url: "https://congresso2023.unimontes.br/anais/391b6341-3b7a-4622-a377-ab88e5380f67",
+    stack: "React, JavaScript, Python Flask",
+    summary:
+      "Premio de segundo melhor trabalho da area de exatas no Congresso Internacional da Unimontes.",
+    year: "2023",
+  },
+  {
+    name: "CustomTkinter Templates",
+    url: "https://github.com/arthurdeka/CustomTkinter-Templates",
+    stack: "Python, CustomTkinter, UV Package Manager",
+    summary: "Repositorio com 100 estrelas no GitHub.",
+    year: "2022",
+  },
+];
 
 const ProjectsPage: React.FC = () => {
-
-    const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 font-primary">
-      <div className="border border-white p-6 w-full max-w-md">
-
-        <div className="flex flex-row justify-between items-center mb-12">
-          <h1 className="text-white text-4xl mb-1">
-            <span className="font-normal flicker-loop ">Projetos</span>
-          </h1>
-          <span onClick={() => navigate("/")} className="cursor-pointer hover:underline">Voltar</span>
-        </div>
-
-        <div className="flex flex-col space-y-6">
-            <div>
-                <a target="_blank" href="https://theopensourcerepository.vercel.app" className="text-2xl hover:underline">The Open Source Repository</a>
-                <h3 className="text-sm text-gray-400">&gt; Vue, TypeScript, Spring Boot, MariaDB, hospedado em EC2 AWS e redirecionado por DuckDNS</h3>
-                <h3 className="text-sm text-gray-400">&gt; Projeto-portfolio de repositório de aplicaçoes open-source.</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2025</h3>
+    <WindowLayout
+      title="Projetos"
+      subtitle="Selecao de trabalhos e produtos"
+      statusLeft="Projetos"
+    >
+      <div className="project-list">
+        {projects.map((project) => (
+          <fieldset key={project.name} className="project-card">
+            <legend>{project.name}</legend>
+            <p>{project.summary}</p>
+            <div className="project-meta">
+              <div>Stack: {project.stack}</div>
+              {project.infra ? <div>Infra: {project.infra}</div> : null}
+              <div>Ano: {project.year}</div>
             </div>
-            <div>
-                <a target="_blank" href="https://www.mcpservershub.tech" className="text-2xl hover:underline">MCP Servers Hub</a>
-                <h3 className="text-sm text-gray-400">&gt; React, TypeScript (responsável somente pelo front)</h3>
-                <h3 className="text-sm text-gray-400">&gt; Em construção...</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2025</h3>
+            <div className="button-row">
+              <a
+                className="button-link"
+                href={project.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Abrir
+              </a>
             </div>
-            <div>
-                <a target="_blank" href="https://customtkbuilder.com" className="text-2xl hover:underline">CustomTkBuilder</a>
-                <h3 className="text-sm text-gray-400">&gt; React, TypeScript</h3>
-                <h3 className="text-sm text-gray-400">&gt; Website de construtor de interfaces com 1.000 usuários mensais de 80 países diferentes.</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2024</h3>
-            </div>
-            <div>
-                <a target="_blank" href="https://chromewebstore.google.com/detail/colorfulgpt/gllpahblfeolhjjdpiljniklgdpkhdne" className="text-2xl hover:underline">ColorfulGPT</a>
-                <h3 className="text-sm text-gray-400">&gt; JavaScript</h3>
-                <h3 className="text-sm text-gray-400">&gt; Extensão de navegador publicada na Chrome Web Store</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2024</h3>
-            </div>
-            <div>
-                <a target="_blank" href="https://congresso2023.unimontes.br/anais/391b6341-3b7a-4622-a377-ab88e5380f67" className="text-2xl hover:underline">Toolkit do Pesquisador</a>
-                <h3 className="text-sm text-gray-400">&gt; React, JavaScript, Python Flask</h3>
-                <h3 className="text-sm text-gray-400">&gt; ♛ Prêmio de segundo melhor trabalho da área de exatas no Congresso Internacional da Unimontes</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2023</h3>
-            </div>
-            <div>
-                <a target="_blank" href="https://github.com/arthurdeka/CustomTkinter-Templates" className="text-2xl hover:underline">CustomTkInter Templates</a>
-                <h3 className="text-sm text-gray-400">&gt; Python, CustomTkinter, UV Package Manager</h3>
-                <h3 className="text-sm text-gray-400">&gt; ☆ 100 estrelas no GitHub</h3>
-                <h3 className="text-sm text-gray-400">&gt; 2022</h3>
-            </div>
-        </div>
-        
-
+          </fieldset>
+        ))}
       </div>
-    </div>
+    </WindowLayout>
   );
 };
 
