@@ -70,7 +70,6 @@ a {
 }
 
 .sidebar-profile img {
-  image-rendering: pixelated;
 }
 
 .sidebar-title {
@@ -125,7 +124,6 @@ a {
 }
 
 .window-favicon {
-  image-rendering: pixelated;
   flex-shrink: 0;
 }
 
@@ -167,7 +165,6 @@ a {
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--border-dark);
-  image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
 
