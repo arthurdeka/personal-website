@@ -165,7 +165,6 @@ a {
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--border-dark);
-  image-rendering: crisp-edges;
 }
 
 .home-grid {
