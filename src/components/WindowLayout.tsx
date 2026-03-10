@@ -31,7 +31,19 @@ const WindowLayout = ({
     <div className="desktop">
       <div className="window main-window">
         <div className="title-bar">
-          <div className="title-bar-text">{title}</div>
+          <div className="title-bar-text">
+            <span className="window-title">
+              <img
+                className="window-favicon"
+                src="/xp-favicon.png"
+                alt=""
+                width={16}
+                height={16}
+                aria-hidden="true"
+              />
+              {title}
+            </span>
+          </div>
           <div className="title-bar-controls">
             <button aria-label="Minimize" />
             <button aria-label="Maximize" />
@@ -42,7 +54,7 @@ const WindowLayout = ({
         <div className="window-body layout-grid">
           <aside className="sidebar">
             <div className="sidebar-profile">
-              <img src="/logo.png" alt="Arthur Rodrigues" width={48} height={48} />
+              <img src="/xp-favicon.png" alt="Arthur Rodrigues" width={48} height={48} />
               <div>
                 <strong>Arthur Rodrigues</strong>
                 <div className="muted">Engenheiro de Software</div>
@@ -70,12 +82,16 @@ const WindowLayout = ({
             <div className="sidebar-section">
               <div className="sidebar-title">Contato rapido</div>
               <div className="field-row-stacked">
-                <label htmlFor="email">Email</label>
-                <input id="email" readOnly value="arthurdk01@gmail.com" />
+                <span className="field-label">Email</span>
+                <div className="readonly-field" role="textbox" aria-readonly="true">
+                  arthurdk01@gmail.com
+                </div>
               </div>
               <div className="field-row-stacked">
-                <label htmlFor="location">Local</label>
-                <input id="location" readOnly value="Montes Claros, MG - Brasil" />
+                <span className="field-label">Local</span>
+                <div className="readonly-field" role="textbox" aria-readonly="true">
+                  Montes Claros, MG - Brasil
+                </div>
               </div>
             </div>
           </aside>
@@ -89,7 +105,7 @@ const WindowLayout = ({
         <div className="status-bar">
           <p className="status-bar-field">{statusLeft ?? "Pronto"}</p>
           <p className="status-bar-field">
-            {statusRight ?? "Portfolio pessoal em 98.css"}
+            {statusRight ?? "Portfolio pessoal em xp.css"}
           </p>
         </div>
       </div>

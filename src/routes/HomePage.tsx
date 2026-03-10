@@ -1,8 +1,6 @@
-﻿import { useNavigate } from "react-router-dom";
-import WindowLayout from "../components/WindowLayout";
+﻿import WindowLayout from "../components/WindowLayout";
 
 const HomePage: React.FC = () => {
-  const navigate = useNavigate();
 
   return (
     <WindowLayout
@@ -12,18 +10,28 @@ const HomePage: React.FC = () => {
       statusRight="Navegue pelo menu a esquerda"
     >
       <div className="home-hero">
-        <h1>Arthur Rodrigues</h1>
-        <p>Engenheiro de Software</p>
-        <p className="muted">
-          Cursando Sistemas de Informacao - Montes Claros, MG
-        </p>
-        <div className="button-row">
+        <div className="home-hero-content">
+          <h1>Arthur Rodrigues</h1>
+          <p>Engenheiro de Software</p>
+          <p className="muted">
+            Cursando Sistemas de Informacao - Montes Claros, MG
+          </p>
+        </div>
+        <img
+          className="home-photo"
+          src="/foto-pessoal.jpg"
+          alt="Foto pessoal de Arthur Rodrigues"
+          width={64}
+          height={64}
+          loading="eager"
+        />
+{/*         <div className="button-row">
           <button className="default" onClick={() => navigate("/projects")}>
             Projetos
           </button>
           <button onClick={() => navigate("/about")}>Sobre mim</button>
           <button onClick={() => navigate("/socials")}>Contato</button>
-        </div>
+        </div> */}
       </div>
 
       <div className="home-grid">
@@ -47,7 +55,7 @@ const HomePage: React.FC = () => {
           </ul>
         </fieldset>
 
-        <fieldset>
+{/*         <fieldset>
           <legend>Atalhos</legend>
           <div className="button-row">
             <button onClick={() => navigate("/mystack")}>Meu stack</button>
@@ -56,7 +64,7 @@ const HomePage: React.FC = () => {
             </button>
             <button onClick={() => navigate("/projects")}>Ver projetos</button>
           </div>
-        </fieldset>
+        </fieldset> */}
 
         <fieldset>
           <legend>Contato</legend>
