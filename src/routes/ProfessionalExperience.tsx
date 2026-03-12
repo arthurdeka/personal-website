@@ -2,31 +2,44 @@
 
 const experiences = [
   {
-    title: "Analise Informatica",
-    period: "2024 - presente",
+    title: "B91 Pagamentos",
+    period: "Jul 2025 - Presente",
     details: [
-      "Desenvolvimento de aplicacao LLM de ChatBot e aplicacoes CRUD para a empresa.",
+      "Cargo: Desenvolvedor Full-Stack.",
+      "Integração de APIs bancarias e de outras instituições de pagamento.",
+      "Desenvolvimento de aplicativos mobile com React Native e Expo.",
+      "Desenvolvimento full-stack com Next.js e NestJS.",
+      "Gerenciamento de bancos MongoDB e MySQL com Prisma ORM.",
+      "Atuação constante no ecossistema TypeScript.",
     ],
   },
   {
-    title: "VOX Internet",
-    period: "2023 - 2024",
-    details: ["Suporte computacional."],
+    title: "Análise Informática",
+    period: "Set 2024 - Jul 2025",
+    details: [
+      "Cargo: Desenvolvedor Full-Stack.",
+      "Desenvolvimento de ChatBot alimentado pela API da OpenAI.",
+      "Desenvolvimento de sistemas CRUD com NestJS e React.",
+      "Planejamento e gerenciamento de banco de dados relacional MySQL.",
+    ],
   },
   {
-    title: "Iniciacao Cientifica",
-    period: "2022 - 2023",
+    title: "Iniciação Científica",
+    period: "Nov 2022 - Nov 2023",
     details: [
-      "Bolsa paga com contrato de 1 ano.",
-      "Desenvolvimento de aplicacao com Python Flask e React.",
+      "Cargo: Desenvolvedor principal.",
+      "Ferramenta para auxiliar pesquisadores iniciantes na produção de trabalhos acadêmicos.",
+      "Projeto financiado pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico.",
+      "Desenvolvido usando JavaScript, tecnologias WEB e banco SQL.",
+      "Publicação de artigo premiado como 2º melhor trabalho em Ciência da Computação no Congresso Internacional de Educação e Inovação da Unimontes.",
     ],
   },
 ];
 
 const education = [
   {
-    title: "Bacharelado em Sistemas de Informacao",
-    period: "2021 - presente",
+    title: "Bacharelado em Sistemas de Informação",
+    period: "2021 - 2026",
     details: ["Universidade Estadual de Montes Claros."],
   },
 ];
@@ -34,12 +47,12 @@ const education = [
 const ProfessionalExperience: React.FC = () => {
   return (
     <WindowLayout
-      title="Experiencia & Educacao"
-      subtitle="Historico profissional e academico"
-      statusLeft="Experiencia"
+      title="Experiência & Educação"
+      subtitle="Histórico profissional e acadêmico"
+      statusLeft="Experiência"
     >
       <fieldset>
-        <legend>Experiencia profissional</legend>
+        <legend>Experiência profissional</legend>
         <div className="xp-list">
           {experiences.map((experience) => (
             <div key={experience.title} className="xp-item">

@@ -11,7 +11,6 @@ type WindowLayoutProps = {
 
 const navItems = [
   { to: "/", label: "Inicio" },
-  { to: "/about", label: "Sobre mim" },
   { to: "/projects", label: "Projetos" },
   { to: "/mystack", label: "Meu stack" },
   { to: "/professionalxp", label: "Experiencia & educacao" },
@@ -54,10 +53,10 @@ const WindowLayout = ({
         <div className="window-body layout-grid">
           <aside className="sidebar">
             <div className="sidebar-profile">
-              <img src="/xp-favicon.png" alt="Arthur Rodrigues" width={48} height={48} />
+              <img src="/xp-favicon.png" alt="Arthur Wagner Alves Rodrigues" width={48} height={48} />
               <div>
-                <strong>Arthur Rodrigues</strong>
-                <div className="muted">Engenheiro de Software</div>
+                <strong>Arthur Wagner Alves Rodrigues</strong>
+                <div className="muted">Desenvolvedor Full-Stack</div>
               </div>
             </div>
 

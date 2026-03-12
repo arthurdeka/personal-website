@@ -1,24 +1,35 @@
-﻿import WindowLayout from "../components/WindowLayout";
+import { useState } from "react";
+import WindowLayout from "../components/WindowLayout";
 
 const socials = [
-  {
-    name: "GitHub",
-    url: "https://github.com/arthurdeka",
-    note: "Desenvolvimento e utilidades.",
-  },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/arthur-wa-rodrigues/",
     note: "Contato profissional.",
   },
   {
-    name: "YouTube",
-    url: "https://www.youtube.com/@arthurcodes/videos",
-    note: "Projetos pessoais e tutoriais.",
+    name: "GitHub",
+    url: "https://github.com/arthurdeka",
+    note: "Projetos open-source e codigo.",
   },
 ];
 
+const EMAIL = "arthurdk01@gmail.com";
+
 const SocialsPage: React.FC = () => {
+  const [copyFeedback, setCopyFeedback] = useState("");
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopyFeedback("Email copiado para a area de transferencia.");
+    } catch {
+      setCopyFeedback("Nao foi possivel copiar o email.");
+    }
+
+    window.setTimeout(() => setCopyFeedback(""), 2200);
+  };
+
   return (
     <WindowLayout
       title="Redes sociais"
@@ -45,8 +56,14 @@ const SocialsPage: React.FC = () => {
       </div>
 
       <fieldset style={{ marginTop: "12px" }}>
-        <legend>WhatsApp</legend>
-        <p>Entre em contato via LinkedIn ou email.</p>
+        <legend>Email</legend>
+        <p>{EMAIL}</p>
+        <div className="button-row">
+          <button type="button" className="button-link" onClick={handleCopyEmail}>
+            Copiar email
+          </button>
+        </div>
+        {copyFeedback ? <p className="muted">{copyFeedback}</p> : null}
       </fieldset>
     </WindowLayout>
   );

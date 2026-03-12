@@ -14,7 +14,7 @@
 body {
   margin: 0;
   background-color: var(--desktop-bg);
-  background-image: url("/bliss.png");
+  background-image: url("/bliss.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -2,33 +2,35 @@
 
 const stackGroups = [
   {
+    title: "Linguagens de programação",
+    items: ["TypeScript", "JavaScript", "Java", "Python"],
+  },
+  {
     title: "Front-end",
     items: [
-      "JavaScript, TypeScript, JSX, TSX",
-      "Vue, React",
-      "Bootstrap, Tailwind",
+      "React, Next.js, React Native, Vue",
+      "Tailwind, Expo, ShadCN",
     ],
   },
   {
     title: "Back-end",
-    items: [
-      "Java 17 Spring Boot, Python Flask, Node.js",
-      "Java Lombok, Express.js",
-      "Testes automatizados",
-    ],
+    items: ["Node.js", "NestJS", "Express.js", "Java Spring Boot"],
   },
   {
-    title: "Banco de dados",
-    items: ["MySQL, MariaDB, PostgreSQL, SQLite", "MongoDB"],
+    title: "Banco de dados e ORM",
+    items: ["MySQL", "MongoDB", "Prisma ORM", "Hibernate"],
   },
   {
-    title: "Ferramentas e DevOps",
+    title: "Idiomas",
+    items: ["Inglês avançado (C1): leio, converso, entendo e escrevo bem."],
+  },
+  {
+    title: "Ferramentas",
     items: [
-      "Vercel, Render (Front-end)",
-      "Lambda AWS, EC2 AWS (Back-end)",
-      "Neon Serverless Postgres, EC2 AWS (DB)",
-      "DuckDNS (DNS)",
-      "Modelos de LLM (Langchain, OpenAI API)",
+      "Git",
+      "Vercel",
+      "Coolify",
+      "Integração com modelos de IA (Langchain, OpenAI API)",
     ],
   },
 ];
