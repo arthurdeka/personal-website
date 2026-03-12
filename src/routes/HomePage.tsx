@@ -3,21 +3,21 @@
 const HomePage: React.FC = () => {
   return (
     <WindowLayout
-      title="Arthur Wagner Alves Rodrigues - Portfolio"
+      title="Arthur Rodrigues - Portfolio"
       subtitle="Desenvolvedor Full-Stack | TypeScript, React, NestJS, Next.js"
       statusLeft="Bem-vindo"
       statusRight="Navegue pelo menu a esquerda"
     >
       <div className="home-hero">
         <div className="home-hero-content">
-          <h1>Arthur Wagner Alves Rodrigues</h1>
+          <h1>Arthur Rodrigues</h1>
           <p>Desenvolvedor Full-Stack</p>
           <p className="muted">Montes Claros, MG - Brasil</p>
         </div>
         <img
           className="home-photo"
           src="/foto-pessoal.jpg"
-          alt="Foto pessoal de Arthur Wagner Alves Rodrigues"
+          alt="Foto pessoal de Arthur Rodrigues"
           width={64}
           height={64}
           loading="eager"

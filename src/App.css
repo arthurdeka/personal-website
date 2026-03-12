@@ -35,6 +35,44 @@ a {
   padding: 24px;
 }
 
+.language-window {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(360px, calc(100vw - 24px));
+  z-index: 20;
+}
+
+.language-window .window-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.language-label {
+  margin: 0;
+  font-size: 12px;
+}
+
+.language-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-link {
+  min-width: 52px;
+  text-align: center;
+}
+
+.lang-link.active {
+  background: var(--title-blue);
+  color: #fff;
+  border-style: inset;
+}
+
 .main-window {
   width: min(1120px, 96vw);
 }
@@ -307,6 +345,27 @@ legend {
 @media (max-width: 720px) {
   .social-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .desktop {
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-top: 156px;
+  }
+
+  .language-window {
+    top: 14px;
+  }
+
+  .language-window .window-body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .language-actions {
+    justify-content: flex-end;
   }
 }
 
